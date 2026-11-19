@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\lin}{\mathrm{lin}}
+\newcommand{\topsp}{\operatorname{top\,spec}}
+\title{A sharp bound on pair formation in the continuum Yukawa--SYK saddle}
+\author{Davis Rens\\SuperMatics Inc.\\ORCID 0000-0001-5839-5197}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Gnezdilov and Boyack found a strong-coupling plateau near $0.041\varepsilon_F$ for the linearized pairing scale of their regularized continuum Yukawa--SYK saddle. We prove that the limiting value is a strict upper bound at every finite coupling. The coefficient is $C_1/(2\pi)$, where $C_1$ is the critical-temperature constant of the scalar gamma model at exponent one. Conditional on the companion certificate, $0.0407176402<C_1/(2\pi)<0.0407176581$. The result concerns a linear instability at $N=\infty$, not an equilibrium transition that could pre-empt it.
+\end{abstract}
+
+\section{Exact transfer and comparison}
+We work with the regularized infinite-band normal-state equation of Gnezdilov and Boyack~\cite{GB}, not a finite-band approximation to it. Write $\tau=k_BT$ and $\omega_D=ck_D>0$ for the bare acoustic cutoff in energy units. The transfer scale is $E=E_D=k_D^2/(2m_0)$ for a momentum disk of radius $k_D$. Indeed, with $\nu_{\rm DOS}=m_0/(2\pi)$ and $\lambda=\nu_{\rm DOS}g^2/(4\pi c^2)$, the dynamical damping coefficient $2\pi\nu_{\rm DOS}^2g^2/\omega_D^2$ is $2\pi\lambda/E_D$. The printed Fermi-energy normalization $E=\varepsilon_F$ uses $k_D=k_F$; if $k_D$ is independent of $k_F$, then $E_D/\varepsilon_F=(k_D/k_F)^2$. In the notation of their Eqs.~(8) and (11)--(16), the nonzero transfers are
+\begin{equation}
+ K_j=\lambda\log\!\left(1+\frac{1}{(\nu_j/\omega_D)^2+2\pi\lambda|\nu_j|/E}\right),
+ \qquad \nu_j=2\pi\tau j,\quad j\ge1.
+ \label{eq:transfer}
+\end{equation}
+Take $N\to\infty$ first. In Eq.~(11) of Ref.~\cite{GB}, the term at $m=n$ has numerator $\Delta_m-(\omega_m/\omega_n)\Delta_n=0$. It cancels before removing the same static regularization from both terms. No independent pairing cutoff is introduced. Onset is the supremum of unstable or marginal temperatures for this normal state, with an empty onset taken as zero.
+
+Write $w_n=2n+1$. The original symmetrized pairing kernel is nonnegative and reflection invariant, so taking the modulus and reflecting a top eigenvector gives a nonzero even top eigenvector. Fold to $n\ge0$ with $y_n=\Delta_n/w_n$. Opposite-sign transfers survive as $K_{n+m+1}$, including on the diagonal. The equation reads $s_n y_n=\sum_mP_{nm}y_m$, with
+\[
+ P_{nm}=(1-\delta_{nm})K_{|n-m|}+K_{n+m+1},\qquad
+ s_n=w_n+2\sum_{j=1}^nK_j.
+\]
+The same-frequency Toeplitz term is omitted; the two directions of each nonzero transfer cancel in the signed normal sum except for $1\le j\le n$. The form of $I-P_{nm}/\sqrt{s_ns_m}$ is congruent, by the bounded invertible diagonal $\sqrt{s_n/w_n}$, to $I-\mathcal A(K)$ with
+\begin{equation}
+ \mathcal A(K)_{nm}=\frac{(1-\delta_{nm})K_{|n-m|}+K_{n+m+1}}{\sqrt{w_nw_m}}
+ -\delta_{nm}\frac{2}{w_n}\sum_{j=1}^{n}K_j .
+ \label{eq:A}
+\end{equation}
+Thus $\topsp\mathcal A(K)>1$ gives instability, equality gives marginality, and $\topsp\mathcal A(K)<1$ gives stability. For the scalar gamma model, $K_j=j^{-\gamma}$, this is the operator treated by Kiessling, Altshuler and Yuzbashyan~\cite{KAY}, Eqs.~(42)--(46). We use the scalar transfer-comparison theorem~\cite{Kondratev,Rens}: for positive nonincreasing summable sequences of nonzero transfers, pointwise increase cannot decrease the top of \eqref{eq:A}; if the first transfer strictly increases, the top strictly increases. This is a spectral-top comparison, not an operator-order comparison.
+
+\begin{theorem}
+Set $C_1=\topsp\mathcal A((1/j)_{j\ge1})/(2\pi)$. For every $\lambda,\omega_D,E>0$ in \eqref{eq:transfer},
+\[
+ k_BT_\lin< \frac{C_1}{2\pi}E,\qquad
+ \lim_{\lambda\to\infty} k_BT_\lin=\frac{C_1}{2\pi}E
+ \quad (\omega_D,E\text{ fixed}).
+\]
+\end{theorem}
+\begin{proof}
+Let $F_j=E/(2\pi|\nu_j|)$ and $d=E\tau/(\lambda\omega_D^2)>0$. Since $\log(1+x)<x$ for $x>0$, the full transfer satisfies
+\begin{equation}
+ K_j<\frac{F_j}{1+dj}\le\frac{F_j}{1+d}.
+ \label{eq:envelope}
+\end{equation}
+The comparison includes all transfers, not just the asymptotic low-frequency form. To apply the summable-sequence theorem, cut both sequences at the same index $L$, adding the same positive sequence $\epsilon/j^2$ if necessary, then let $\epsilon\downarrow0$ and $L\to\infty$. The sequences remain ordered and nonincreasing.
+
+Here is the norm-limit justification for this step and for the strong-coupling limit below. Under an envelope $B/j$ with fixed $B$, pointwise convergence of transfers implies operator-norm convergence. For the off-diagonal Toeplitz term, group the squared entries by $|n-m|=j$ and use $\sum_n(w_nw_{n+j})^{-1}\le\sum_n w_n^{-2}$. For the Hankel term group by $n+m+1=j$ and use $2/(w_nw_m)\le w_n^{-2}+w_m^{-2}$. Both squared-entry sums are dominated by a constant times $\sum_j j^{-2}$. The diagonal converges on finite blocks and has a uniform $O((1+\log(1+n))/w_n)$ tail. These estimates also prove compactness.
+
+By comparison and homogeneity, $\topsp\mathcal A(K)\le EC_1/[2\pi\tau(1+d)]$. At $\tau_* = EC_1/(2\pi)$ this has a strict gap from one; it is less than one for every $\tau\ge\tau_*$, and, by continuity of this bound, also immediately below $\tau_*$. This proves strictness of the supremum. For fixed $j$ and $\tau$, write $K_j=\lambda\log(1+x_j)$. As $\lambda\to\infty$, $x_j\to0$ and $\lambda x_j\to F_j$. Since $\log(1+x_j)/x_j\to1$, $K_j\to F_j$ pointwise and hence in the operator norm just proved. If $\tau<\tau_*$ the limiting top exceeds one, so the finite-coupling problem is unstable there for all sufficiently large $\lambda$. These bounds give the claimed limit.
+\end{proof}
+
+\section{Numerical enclosure and scope}
+The $\gamma=1$ limit and the numerical estimate $k_BT_\lin\simeq 0.041E$ were already obtained in Ref.~\cite{GB}, which also interpreted the saturation as an upper bound. Their three-frequency approximation gave $0.038E$. Added here are a proof of that sharp inequality at every finite coupling, an operator-norm argument for its attainment in the coupling limit, and an enclosure for the coefficient. The enclosure is conditional on the analytic tail proof and the exact and interval calculation in the companion gamma-model certificate~\cite{GammaCert}. Its sources are bundled byte for byte, with SHA-256 pins and replay commands, in the replay supplement~\cite{Supp}. The rational replay in the supplement takes the endpoints $[0.255836478838462,0.255836590500742]$ for $C_1$ as inputs and divides them outward using Machin's identity. It does not rerun the certificate; the bundled certificate replay is a separate command in the supplement.
+
+For comparison, $K_j<\lambda\omega_D^2/\nu_j^2$ by the same logarithm inequality. The summable scalar comparison gives $k_BT_\lin<C_2\sqrt\lambda\,\omega_D$, where $C_2=\sqrt{\topsp\mathcal A((1/j^2)_{j\ge1})}/(2\pi)$. Strictness at the supremum again follows by retention of the scalar gap below the nominal threshold, by norm continuity at positive temperature. This is a different, bare-moment ceiling, which grows with coupling and does not explain the plateau. The damping term in \eqref{eq:transfer} is essential to the coupling-independent comparison.
+
+For the pure gamma model, Elezaby and Abanov~\cite{EA} already gave a nonsharp rigorous bound. At exponent one, their Eq.~(44) reads $2\pi C_1\le\sum_{n\ge1}(n^2-1/4)^{-1}=2$, by telescoping. It gives neither a sharp value of $C_1$ nor the finite-coupling comparison for \eqref{eq:transfer}.
+
+Esterlis and Schmalian~\cite{ES} already derived the corresponding equal-flavor dot's \emph{limiting} eigenproblem and identified its Allen--Dynes estimate $0.1827\sqrt{3/8}\,\Omega_0$. That is a different limit at a different scale, not an all-coupling inequality for either saddle. Stangier and Schmalian~\cite{SS} study the dot's conformal pairing spectrum, and Khveshchenko~\cite{DK} analyzes a cutoff-dependent near-critical pairing tower. The continuum comparison above does not use either approximation.
+
+Neither bound controls an equilibrium first-order transition, a competing saddle, the finite lower edge of a quadratic band, phase coherence at finite $N$, or any measured material. Interpreting $T_\lin$ as the equilibrium $T_c$ requires that the physical superconducting transition out of this normal state be continuous and governed by this instability.
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

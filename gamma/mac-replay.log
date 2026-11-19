@@ -1,0 +1,50 @@
+Installed 3 packages in 31ms
+gamma=1/2 lower=[0.799548449131638942 +/- 3.41e-19] upper=[0.817226785422398983 +/- 4.38e-19] EA=[1.41247218081233096 +/- 4.59e-18]
+  relative_width= [0.022110400 +/- 3.27e-10] EA_gap_improvement= [34.670894 +/- 4.56e-7] tail= [0.76492208 +/- 4.95e-9] beta2= [0.076705944 +/- 2.58e-10]
+gamma=1/2 n=384 independent_lower=[0.804347534377494335 +/- 2.37e-19] independent_upper=[0.811865508217380435 +/- 3.38e-19]
+gamma=1/1 lower=[0.255836440613395658 +/- 4.86e-19] upper=[0.255836593305877770 +/- 3.45e-19] EA=[0.318309886183790672 +/- 4.63e-19]
+  relative_width= [5.9683633e-7 +/- 7.23e-16] EA_gap_improvement= [409145.52 +/- 3.78e-3] tail= [0.018263260 +/- 4.62e-10] beta2= [0.0016930050 +/- 1.24e-11]
+gamma=1/1 n=1400 independent_lower=[0.255836478838462756 +/- 2.48e-19] independent_upper=[0.255836590500741381 +/- 4.59e-19]
+gamma=3/2 lower=[0.199990961094447808 +/- 1.49e-19] upper=[0.199990973655772764 +/- 3.62e-19] EA=[0.225747978483960109 +/- 4.51e-19]
+  relative_width= [6.2809463e-8 +/- 4.27e-16] EA_gap_improvement= [2050501.6 +/- 0.0373] tail= [0.029538474 +/- 1.29e-10] beta2= [0.0077519565 +/- 6.48e-12]
+gamma=3/2 n=384 independent_lower=[0.199990970667518133 +/- 3.46e-19] independent_upper=[0.199990972152203690 +/- 3.36e-19]
+gamma=2/1 lower=[0.182726247742154218 +/- 7.70e-20] upper=[0.182726247776485679 +/- 2.11e-19] EA=[0.197837817171106044 +/- 2.44e-19]
+  relative_width= [1.8788467e-10 +/- 2.46e-19] EA_gap_improvement= [4.4016681e+8 +/- 3.37] tail= [0.017331012 +/- 3.85e-10] beta2= [0.0068297990 +/- 2.32e-11]
+gamma=2/1 n=384 independent_lower=[0.182726247770444426 +/- 7.39e-21] independent_upper=[0.182726247772481396 +/- 1.51e-19]
+gamma=3/1 lower=[0.170998736895348379 +/- 4.88e-19] upper=[0.170998736895348779 +/- 4.22e-20] EA=[0.178899776239799653 +/- 2.23e-19]
+  relative_width= [2.3418046e-15 +/- 1.89e-23] EA_gap_improvement= [1.9730617e+13 +/- 2.00e+5] tail= [0.012523025 +/- 3.78e-10] beta2= [0.0061512839 +/- 3.62e-11]
+gamma=3/1 n=384 independent_lower=[0.170998736895348723 +/- 3.34e-19] independent_upper=[0.170998736895348729 +/- 4.12e-19]
+PASS gamma=1 printed endpoint containment
+PASS gamma=1.5 printed endpoint containment
+PASS gamma=3 printed endpoint containment
+PASS gamma=2 absolute normalization anchor
+REJECT normalization mutant
+REJECT unbalanced thermal-cancellation mutant
+REJECT half-tail-residual mutant
+PASS gamma=1/2 tight interval: [0.809438358685915468 +/- 3.59e-19] [0.809438601885950945 +/- 4.61e-19]
+PASS gamma=0.5 printed endpoint containment
+gamma=2; trial_size=8192; gap_size=192
+rho Rayleigh ball: [1.318140212132420239970304 +/- 4.48e-25]
+second-eigenvalue upper bound ball: [0.09200089068674913681666120 +/- 2.10e-27]
+finite residual squared ball: [2.84467464904e-33 +/- 3.67e-45]
+infinite tail residual squared upper-bound ball: [1.73280870033e-16 +/- 5.73e-29]
+Tc/g lower endpoint ball: [0.1827262477723295078215180 +/- 2.70e-26]
+Tc/g upper endpoint ball: [0.1827262477723295176168719 +/- 3.42e-26]
+Tc/g enclosure uses lower endpoint's lower bound and upper endpoint's upper bound
+Tc/g width bound ball: [9.79535389285e-18 +/- 2.31e-30]
+PASS gamma=2 printed endpoint containment
+REJECT injected low-U Temple mutant
+gamma=2; trial_size=8192; gap_size=192
+rho Rayleigh ball: [1.318140212132420239970304 +/- 4.48e-25]
+second-eigenvalue upper bound ball: [0.09200089068674913681666120 +/- 2.10e-27]
+finite residual squared ball: [2.84467464904e-33 +/- 3.67e-45]
+infinite tail residual squared upper-bound ball: [1.73280870033e-16 +/- 5.73e-29]
+Tc/g lower endpoint ball: [0.1827262477723295078215180 +/- 2.70e-26]
+Tc/g upper endpoint ball: [0.1827262477723295176168719 +/- 3.42e-26]
+Tc/g enclosure uses lower endpoint's lower bound and upper endpoint's upper bound
+Tc/g width bound ball: [9.79535389285e-18 +/- 2.31e-30]
+PASS gamma=2 supplemental 16384-site Rayleigh lower: [0.182726247772329516352325238235 +/- 2.30e-32]
+PASS gamma=2 existing infinite-operator upper: [0.182726247772329517616871865901 +/- 9.73e-32]
+PASS strictly between 17-place rounding boundaries: 0.182726247772329515 0.182726247772329525
+CERTIFIED gamma=2 T_lin/g rounds to 0.18272624777232952
+PASS replay: all five relative-width targets and gamma=2 absolute width
